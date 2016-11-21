@@ -261,7 +261,7 @@ defmodule AWS.Cognito do
     {:error, HTTPoison.Error.t}
   defp request(client, action, input, options) do
     client = %{client | service: "cognito-identity"}
-    host = get_host("cognito-identity", client)
+    host = get_host("cognito-idp", client)
     url = get_url(host, client)
     headers = [{"Host", host},
                {"Content-Type", "application/x-amz-json-1.1"},
